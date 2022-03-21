@@ -1,20 +1,18 @@
 # Usage: az-create-iotedge-windows-resources.sh <resource group name> <IoT Hub name> <IoT device ID name> 
 # https://docs.microsoft.com/azure/iot-edge/quickstart
-
-if [ $# -eq 0 ]
-  then
-    echo "Usage: az-create-iotedge-resources.sh <resource group name> <IoT Hub name> <IoT device ID name>"
-    exit 1
-fi
-
-echo "Resource group: $1"
-az group create --name $1 --location westus2
-
-echo "IoT Hub: $2"
-az iot hub create --resource-group $1 --name $2 --sku F1 --partition-count 2
-
-echo "IoT device id: $3"
-az iot hub device-identity create --device-id $3 --edge-enabled --hub-name $2 --resource-group $1
-
-echo "IoT device id $3 connection string:"
-az iot hub device-identity connection-string show --device-id $3 --hub-name $2 --resource-group $1
+# Create resource group
+RESOURCE_GROUP="${1:-IoTEdgeResources}" # First argument or sample value IoTEdgeResources
+echo "Resource group: $RESOURCE_GROUP"
+az group create --name $RESOURCE_GROUP --location westus2
+# Create IoT Hub
+IOT_HUB="${2:-patrickaIoTHub}" # Second argument or sample value patrickaIoTHub
+echo "IoT Hub: $IOT_HUB"
+az iot hub create --resource-group $RESOURCE_GROUP --name $IOT_HUB --sku F1 --partition-count 2
+read -t 60 -p "Waiting 60 seconds for IoT Hub creation..."
+# Create IoT device
+IOT_DEVICE="${3:-myEdgeDevice}" # Third argument or sample value myEdgeDevice
+echo "IoT device id: $IOT_DEVICE"
+az iot hub device-identity create --device-id $IOT_DEVICE --edge-enabled --hub-name $IOT_HUB --resource-group $RESOURCE_GROUP
+# Show IoT device connection string
+echo "IoT device id $IOT_DEVICE connection string:"
+az iot hub device-identity connection-string show --device-id $IOT_DEVICE --hub-name $IOT_HUB --resource-group $RESOURCE_GROUP
