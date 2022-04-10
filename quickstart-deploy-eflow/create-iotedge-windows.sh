@@ -1,4 +1,4 @@
-# Usage: create-iotedge-windows-resources.sh <resource group name> <IoT Hub name> <IoT device ID name> 
+# Usage: create-iotedge-windows.sh <resource group name> <IoT Hub name> <IoT device ID name> 
 # https://docs.microsoft.com/azure/iot-edge/quickstart
 
 # Create resource group

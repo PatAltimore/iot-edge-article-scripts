@@ -1,3 +1,4 @@
+#!/bin/bash
 # Usage: delete-iotedgeresources.sh <resource group name>
 
 # Delete resource group
