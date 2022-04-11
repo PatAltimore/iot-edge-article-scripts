@@ -9,7 +9,7 @@ IOT_DEVICE="${3:-patricka-iotedge-device}" # Third argument or sample value patr
 VM_NAME="${4:-patricka-iotedge-vm}" # Fourth argument or sample value patricka-iotedge-vm
 
 # Call scripts to create resources
-source create-iotedgeresources.sh
-source create-iot-hub.sh
-source create-iotedge-device.sh
-source deploy-iotedge-linux-device.sh
+source create-iotedgeresources.sh $RESOURCE_GROUP
+source create-iot-hub.sh $RESOURCE_GROUP $IOT_HUB
+source create-iotedge-device.sh $RESOURCE_GROUP $IOT_HUB $IOT_DEVICE
+source deploy-iotedge-linux-device.sh $RESOURCE_GROUP $IOT_HUB $IOT_DEVICE $VM_NAME

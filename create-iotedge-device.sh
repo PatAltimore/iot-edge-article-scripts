@@ -7,7 +7,7 @@ IOT_HUB="${2:-patrickaIoTHub}" # Second argument or sample value patrickaIoTHub
 IOT_DEVICE="${3:-myEdgeDevice}" # Third argument or sample value myEdgeDevice
 
 # Create IoT device
-echo "IoT device id: $IOT_DEVICE"
+echo "Creating IoT device id: $IOT_DEVICE..."
 az iot hub device-identity create --device-id $IOT_DEVICE --edge-enabled --hub-name $IOT_HUB
 
 # Show IoT device connection string

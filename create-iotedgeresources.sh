@@ -3,5 +3,5 @@
 
 # Create resource group
 RESOURCE_GROUP="${1:-IoTEdgeResources}" # First argument or sample value IoTEdgeResources
-echo "Resource group: $RESOURCE_GROUP"
+echo "Creating resource group: $RESOURCE_GROUP..."
 az group create --name $RESOURCE_GROUP --location westus2
