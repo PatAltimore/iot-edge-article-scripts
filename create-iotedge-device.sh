@@ -2,7 +2,7 @@
 # Usage: create-iotedge-device.sh <resource group name> <IoT Hub name> <IoT device ID name>
 
 # Set up variables based on arguments or defaults
-RESOURCE_GROUP="${1:-IoTEdgeResources}" # First argument or sample value IoTEdgeResources
+RESOURCE_GROUP="${1:-patricka-IoTEdgeResources}" # First argument or sample value patricka-IoTEdgeResources
 IOT_HUB="${2:-patrickaIoTHub}" # Second argument or sample value patrickaIoTHub
 IOT_DEVICE="${3:-myEdgeDevice}" # Third argument or sample value myEdgeDevice
 
