@@ -1,6 +1,6 @@
 #!/bin/bash
 # Usage: deploy-iotedge-linux-device.sh <resource group name> <IoT Hub name> <IoT device ID name> <IoT device VM name>
-# https://docs.microsoft.com/azure/iot-edge/quickstart-linux
+# https://github.com/Azure/iotedge-vm-deploy/tree/1.2
 
 # Set up variables based on arguments or defaults
 RESOURCE_GROUP="${1:-patricka-IoTEdgeResources}" # First argument or sample value patricka-IoTEdgeResources
