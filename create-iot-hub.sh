@@ -6,5 +6,5 @@ RESOURCE_GROUP="${1:-patricka-IoTEdgeResources}" # First argument or sample valu
 IOT_HUB="${2:-patrickaIoTHub}" # Second argument or sample value patrickaIoTHub
 
 # Create IoT Hub
-echo "Creating IoT Hub: $IOT_HUB..."
+echo "$(tput setaf 3)Creating IoT Hub: $IOT_HUB..."
 az iot hub create --resource-group $RESOURCE_GROUP --name $IOT_HUB --sku F1 --partition-count 2

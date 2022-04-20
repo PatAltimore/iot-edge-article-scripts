@@ -3,5 +3,5 @@
 
 # Create resource group
 RESOURCE_GROUP="${1:-patricka-IoTEdgeResources}" # First argument or sample value patricka-IoTEdgeResources
-echo "Creating resource group: $RESOURCE_GROUP..."
+echo "$(tput setaf 3)Creating resource group: $RESOURCE_GROUP..."
 az group create --name $RESOURCE_GROUP --location westus2
