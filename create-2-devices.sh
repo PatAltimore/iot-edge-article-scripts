@@ -1,5 +1,5 @@
 #!/bin/bash
-# Usage: quickstart-create-iotedge-linux.sh <resource group name> <IoT Hub name> <IoT device ID name> <IoT device VM name> <Second IoT device ID name> <Second IoT device VM name>
+# Usage: ./create-2-devices.sh <resource group name> <IoT Hub name> <IoT device ID name> <IoT device VM name> <Second IoT device ID name> <Second IoT device VM name> <Key Vault name>
 # https://docs.microsoft.com/azure/iot-edge/how-to-connect-downstream-iot-edge-device
 
 # Set up variables based on arguments or defaults
@@ -9,7 +9,7 @@ IOT_DEVICE="${3:-patricka-iotedge-device}" # Third argument or sample value patr
 VM_NAME="${4:-patricka-iotedge-vm}" # Fourth argument or sample value patricka-iotedge-vm
 IOT_DEVICE2="${5:-patricka-iotedge-device2}" # Fifth argument or sample value patricka-iotedge-device2
 VM_NAME2="${6:-patricka-iotedge-vm2}" # Sixth argument or sample value patricka-iotedge-vm2
-KEYVAULT_NAME="${5:-patricka-keyvault2}" # Fifth argument or sample value patricka-keyvault
+KEYVAULT_NAME="${7:-patricka-keyvault2}" # Seventh argument or sample value patricka-keyvault
 
 # Call scripts to create resources
 source create-iotedgeresources.sh $RESOURCE_GROUP

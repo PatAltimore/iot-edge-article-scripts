@@ -11,7 +11,7 @@ KEYVAULT_NAME="${5:-patricka-keyvault}" # Fifth argument or sample value patrick
 
 # Generate password and store in keyvault
 PASSWORD=$(openssl rand -base64 12)
-echo "$(tput setaf 1)Generated password for VM: $PASSWORD"
+echo "$(tput setaf 1)Generated password for VM: $PASSWORD$(tput setaf 7)"
 
 az keyvault secret set \
     --vault-name "$KEYVAULT_NAME" \
@@ -19,7 +19,7 @@ az keyvault secret set \
     --value "$PASSWORD"
 
 # Deploy IoT Edge device as a Linux VM
-echo "$(tput setaf 3)Creating Linux VM name $VM_NAME..."
+echo "$(tput setaf 3)Creating Linux VM name $VM_NAME...$(tput setaf 7)"
 az deployment group create \
 --resource-group "$RESOURCE_GROUP" \
 --template-uri "https://raw.githubusercontent.com/Azure/iotedge-vm-deploy/1.2/edgeDeploy.json" \
