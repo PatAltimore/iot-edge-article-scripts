@@ -33,5 +33,5 @@ az deployment group create \
 echo "$(tput setaf 3)Setting VM auto-shutdown...$(tput setaf 7)"
 az vm auto-shutdown \
 --resource-group "$RESOURCE_GROUP" \
---name "$VM_NAME"
+--name "$VM_NAME" \
 --time 0200
