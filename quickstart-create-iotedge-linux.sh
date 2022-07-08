@@ -8,7 +8,7 @@ RESOURCE_GROUP="${1:-patricka-IoTEdgeResources}" # First argument or sample valu
 IOT_HUB="${2:-patricka-iot-hub}" # Second argument or sample value patricka-iot-hub
 IOT_DEVICE="${3:-patricka-iotedge-device}" # Third argument or sample value patricka-iotedge-device
 VM_NAME="${4:-patricka-iotedge-vm}" # Fourth argument or sample value patricka-iotedge-vm
-KEYVAULT_NAME="${5:-patricka-keyvault2}" # Fifth argument or sample value patricka-keyvault
+KEYVAULT_NAME="${5:-patricka-keyvault}" # Fifth argument or sample value patricka-keyvault
 
 # Call scripts to create resources
 source create-iotedgeresources.sh $RESOURCE_GROUP

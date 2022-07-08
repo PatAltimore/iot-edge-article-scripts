@@ -28,3 +28,10 @@ az deployment group create \
 --parameters deviceConnectionString="$(az iot hub device-identity connection-string show --device-id $IOT_DEVICE --hub-name $IOT_HUB -o tsv)" \
 --parameters authenticationType='password' \
 --parameters adminPasswordOrKey="$PASSWORD"
+
+# Set auto-shutdown
+echo "$(tput setaf 3)Setting VM auto-shutdown...$(tput setaf 7)"
+az vm auto-shutdown \
+--resource-group "$RESOURCE_GROUP" \
+--name "$VM_NAME"
+--time 0200

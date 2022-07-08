@@ -6,9 +6,9 @@
 RESOURCE_GROUP="${1:-patricka-IoTEdgeResources}" # First argument or sample value patricka-IoTEdgeResources
 KEYVAULT_NAME="${2:-patricka-keyvault}" # Second argument or sample value patricka-keyvault
 
-printf "$(tput setaf 3)Creating Key Vault name '%s'.$(tput setaf 7)\n" $KEYVAULT_NAME
+printf "$(tput setaf 3)Creating Key Vault '%s'.$(tput setaf 7)...\n" $KEYVAULT_NAME
 
 az keyvault create \
     --name "$KEYVAULT_NAME" \
     --resource-group "$RESOURCE_GROUP" \
-    --location 'WestUS2'
+    --location 'WestUS'
