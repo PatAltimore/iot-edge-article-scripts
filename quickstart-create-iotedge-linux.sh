@@ -1,7 +1,6 @@
 #!/bin/bash
 # Usage: quickstart-create-iotedge-linux.sh <resource group name> <IoT Hub name> <IoT device ID name> <IoT device VM name> <Key Vault name>
 # https://docs.microsoft.com/azure/iot-edge/quickstart-linux
-# https://github.com/Azure/iot-edge-config/blob/main/src/azure-iot-edge-installer.sh
 
 # Set up variables based on arguments or defaults
 RESOURCE_GROUP="${1:-patricka-IoTEdgeResources}" # First argument or sample value patricka-IoTEdgeResources
