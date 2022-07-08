@@ -4,7 +4,7 @@
 # Create resource group
 RESOURCE_GROUP="${1:-patricka-IoTEdgeResources}" # First argument or sample value patricka-IoTEdgeResources
 echo "Creating resource group $RESOURCE_GROUP..."
-az group create --name $RESOURCE_GROUP --location westus
+az group create --name $RESOURCE_GROUP --location eastus
 
 # Create IoT Hub
 IOT_HUB="${2:-patrickaIoTHub}" # Second argument or sample value patrickaIoTHub

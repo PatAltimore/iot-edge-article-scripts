@@ -11,4 +11,4 @@ printf "$(tput setaf 3)Creating Key Vault '%s'.$(tput setaf 7)...\n" $KEYVAULT_N
 az keyvault create \
     --name "$KEYVAULT_NAME" \
     --resource-group "$RESOURCE_GROUP" \
-    --location 'WestUS'
+    --location 'EastUS'
