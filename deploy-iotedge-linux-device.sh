@@ -1,6 +1,6 @@
 #!/bin/bash
 # Usage: deploy-iotedge-linux-device.sh <resource group name> <IoT Hub name> <IoT device ID name> <IoT device VM name> <Key Vault name>
-# https://aka.ms/iotedge-vm-deploy
+# https://github.com/azure/iotedge-vm-deploy/tree/1.3
 
 # Set up variables based on arguments or defaults
 RESOURCE_GROUP="${1:-patricka-IoTEdgeResources}" # First argument or sample value patricka-IoTEdgeResources
@@ -22,7 +22,7 @@ az keyvault secret set \
 echo "$(tput setaf 3)Creating Linux VM name $VM_NAME...$(tput setaf 7)"
 az deployment group create \
 --resource-group "$RESOURCE_GROUP" \
---template-uri "https://raw.githubusercontent.com/Azure/iotedge-vm-deploy/master/edgeDeploy.json" \
+--template-uri "https://raw.githubusercontent.com/Azure/iotedge-vm-deploy/1.3/edgeDeploy.json" \
 --parameters dnsLabelPrefix="$VM_NAME" \
 --parameters adminUsername='azureUser' \
 --parameters deviceConnectionString="$(az iot hub device-identity connection-string show --device-id $IOT_DEVICE --hub-name $IOT_HUB -o tsv)" \
