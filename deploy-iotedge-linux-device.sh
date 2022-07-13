@@ -22,7 +22,7 @@ az keyvault secret set \
 echo "$(tput setaf 3)Creating Linux VM name $VM_NAME...$(tput setaf 7)"
 az deployment group create \
 --resource-group "$RESOURCE_GROUP" \
---template-uri "https://raw.githubusercontent.com/Azure/iotedge-vm-deploy/1.2/edgeDeploy.json" \
+--template-uri "https://aka.ms/iotedge-vm-deploy" \
 --parameters dnsLabelPrefix="$VM_NAME" \
 --parameters adminUsername='azureUser' \
 --parameters deviceConnectionString="$(az iot hub device-identity connection-string show --device-id $IOT_DEVICE --hub-name $IOT_HUB -o tsv)" \
