@@ -1,6 +1,8 @@
 #!/bin/bash
 # Usage: deploy-iotedge-linux-device-ssh.sh <resource group name> <IoT Hub name> <IoT device ID name> <IoT device VM name> <Key Vault name>
 # https://github.com/azure/iotedge-vm-deploy/tree/1.3
+#
+# Prerequisite: Your public SSH key must exist at ~/.ssh/id_rsa.pub
 
 # Set up variables based on arguments or defaults
 RESOURCE_GROUP="${1:-patricka-IoTEdgeResources}" # First argument or sample value patricka-IoTEdgeResources
