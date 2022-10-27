@@ -6,7 +6,7 @@
 RESOURCE_GROUP="patricka-iotedgeresources"
 IOT_HUB="patricka-iot-hub"
 IOT_DEVICE="${1:-patricka-device1}" # First argument or sample value patricka-iotedge-device
-VM_NAME= IOT_DEVICE + "-vm"
+VM_NAME="${IOT_DEVICE}-vm"
 KEYVAULT_NAME="patricka-keyvault"
 
 # Call scripts to create resources
