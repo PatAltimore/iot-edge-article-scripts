@@ -3,7 +3,7 @@
 # Use defaults to create test device
 
 # Set up variables based on arguments or defaults
-RESOURCE_GROUP="IoTEdgeResources"
+RESOURCE_GROUP="patricka-iotedgeresources"
 IOT_HUB="patricka-iot-hub"
 IOT_DEVICE="${1:-patricka-device1}" # First argument or sample value patricka-iotedge-device
 VM_NAME= IOT_DEVICE + "-vm"
