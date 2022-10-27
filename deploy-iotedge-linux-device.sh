@@ -20,9 +20,9 @@ az keyvault secret set \
 
 # Deploy IoT Edge device as a Linux VM
 echo "$(tput setaf 3)Creating Linux VM name $VM_NAME...$(tput setaf 7)"
-az deployment group create \
+az group deployment create \
 --resource-group "$RESOURCE_GROUP" \
---template-uri "https://raw.githubusercontent.com/Azure/iotedge-vm-deploy/1.3/edgeDeploy.json" \
+--template-uri "https://raw.githubusercontent.com/Azure/iotedge-vm-deploy/1.4/edgeDeploy.json" \
 --parameters dnsLabelPrefix="$VM_NAME" \
 --parameters adminUsername='azureUser' \
 --parameters deviceConnectionString="$(az iot hub device-identity connection-string show --device-id $IOT_DEVICE --hub-name $IOT_HUB -o tsv)" \
